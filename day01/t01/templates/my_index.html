@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT岗位</title>
+</head>
+<body>
+<h1>工程师分类</h1>
+
+<!-- ul>li*4  然后按一下tab键，注意这里不是回车-->
+
+<!--方式一： 这种写法 是静态页面，是写死的，不管数据怎么变化，都是显示这个-->
+<!--<ul>-->
+    <!--<li>前端工程师</li>-->
+    <!--<li>后端工程师</li>-->
+    <!--<li>测试工程师</li>-->
+    <!--<li>全栈工程师</li>-->
+<!--</ul>-->
+
+
+<!--方式二： 这种方式是将从model获取到的数据，显示出来-->
+<ul>
+    <!--遍历获取的数据，mydata是字典中的key，通过key获取对应的数据data-->
+    {% for i in mydata%}
+        <!--i是获取的每条数据，数据中有字段name，age-->
+        <li>{{i.name}}</li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>
